@@ -7,5 +7,6 @@ In this repository I will upload the code of the problems that I will be solving
 
 #### Topics (Number of Problems Solved):
 - String (6)
-- Array (7)
+- Array (8)
 - Dynamic Programming (2)
+- Sorting(2)
