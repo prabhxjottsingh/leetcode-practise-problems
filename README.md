@@ -12,6 +12,6 @@ In this repository I will upload the code of the problems that I will be solving
 - Sorting (2)
 - Linked List (1)
 - Hash Table (2)
-- Stack (1)
+- Stack (6)
 - Greedy (2)
 - Recursion (1)
