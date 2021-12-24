@@ -6,7 +6,7 @@ In this repository I will upload the code of the problems that I will be solving
 <a href="https://leetcode.com/prabhxs/">Leetcode Profile </a>
 
 #### Topics (Number of Problems Solved):
-- String (8)
+- String (10)
 - Array (8)
 - Dynamic Programming (2)
 - Sorting (2)
