@@ -10,7 +10,7 @@ In this repository I will upload the code of the problems that I will be solving
 - Array (8)
 - Dynamic Programming (2)
 - Sorting (2)
-- Linked List (1)
+- Linked List (2)
 - Hash Table (2)
 - Stack (6)
 - Greedy (2)
