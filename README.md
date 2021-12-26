@@ -15,5 +15,6 @@ In this repository I will upload the code of the problems that I will be solving
 - Stack (6)
 - Greedy (2)
 - Recursion (1)
-- Mathematics (1)
+- Mathematics (2)
 - Bit Manipulation (2)
+- Matrix (1)
