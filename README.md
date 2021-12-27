@@ -7,12 +7,12 @@ In this repository I will upload the code of the problems that I will be solving
 
 #### Topics (Number of Problems Solved):
 - String (10)
-- Array (8)
+- Array (10)
 - Dynamic Programming (2)
 - Sorting (2)
 - Linked List (4)
 - Hash Table (2)
-- Stack (6)
+- Stack (7)
 - Greedy (2)
 - Recursion (1)
 - Mathematics (2)
