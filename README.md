@@ -6,11 +6,11 @@ In this repository I will upload the code of the problems that I will be solving
 <a href="https://leetcode.com/prabhxs/">Leetcode Profile </a>
 
 #### Topics (Number of Problems Solved):
-- String (12)
+- String (14)
 - Array (10)
 - Dynamic Programming (2)
 - Sorting (5)
-- Linked List (8)
+- Linked List (9)
 - Hash Table (2)
 - Stack (7)
 - Greedy (2)
@@ -19,3 +19,4 @@ In this repository I will upload the code of the problems that I will be solving
 - Bit Manipulation (2)
 - Matrix (4)
 - Sieve of Eratosthenes (2)
+- Binary Search (2)
