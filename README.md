@@ -12,7 +12,7 @@ In this repository I will upload the code of the problems that I will be solving
 - Sorting (6)
 - Linked List (11)
 - Hash Table (2)
-- Stack (7)
+- Stack (9)
 - Greedy (3)
 - Design (3)
 - Recursion (6)
