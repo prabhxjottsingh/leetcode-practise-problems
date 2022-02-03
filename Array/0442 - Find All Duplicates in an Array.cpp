@@ -1,5 +1,5 @@
 //Tag: medium
-//Problem Link: https://leetcode.com/problems/missing-number/
+//Problem Link: https://leetcode.com/problems/find-all-duplicates-in-an-array/
 
 class Solution
 {
