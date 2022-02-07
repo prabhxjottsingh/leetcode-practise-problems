@@ -4,7 +4,7 @@
 In this repository I will upload the code of the problems that I will be solving on the leetcode along with their time complexities for my better practise, will try my best to be as onsistent as much possible. :)
 
 <a href="https://leetcode.com/prabhxs/">Leetcode Profile </a>
-
+<!-- 
 #### Topic (Number of Problems Solved):
 - String (19)
 - Array (20)
@@ -22,4 +22,4 @@ In this repository I will upload the code of the problems that I will be solving
 - Sieve of Eratosthenes (2)
 - Binary Search (3)
 - Depth First Search (1)
-- Heap (1)
+- Heap (1) -->
