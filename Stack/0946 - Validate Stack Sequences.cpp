@@ -1,6 +1,7 @@
 //Tags: Stack, Medium
 //Problem Link: https://leetcode.com/problems/validate-stack-sequences/
 //Time Compxity: O(n)
+//Space Complexity: O(N) -> because of use of stack
 
 class Solution
 {
