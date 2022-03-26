@@ -28,3 +28,26 @@ public:
         return subset;
     }
 };
+
+//Using Bits
+
+//Time Complexity: O( N * (2^N) )
+//Space Complexity: O(1)
+
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        int n = nums.size();
+        int numberOfSubsets = (1 << n);
+        vector<vector<int>> subsets;
+        for(int mask = 0; mask < numberOfSubsets; mask++){
+            vector<int> subset;
+            for(int i = 0; i < n; i++){
+                if( (mask & (1 << i)) != 0 )
+                    subset.push_back(nums[i]);
+            }
+            subsets.push_back(subset);
+        }
+        return subsets;
+    }
+};
