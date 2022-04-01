@@ -27,7 +27,6 @@ public:
     int splitArray(vector<int> &nums, int m)
     {
         int low = INT_MAX, high = 0, sum = 0, ans;
-        sort(nums.begin(), nums.end());
         int size = nums.size();
         for (int i = 0; i < size; i++)
         {
