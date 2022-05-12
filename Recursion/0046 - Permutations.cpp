@@ -1,7 +1,7 @@
-//Tags: Medium, Recursion
-//Problem Link: https://leetcode.com/problems/permutations/
-//Time Complexity:
-//Space Complexity:
+// Tags: Medium, Recursion
+// Problem Link: https://leetcode.com/problems/permutations/
+// Time Complexity:
+// Space Complexity:
 
 class Solution
 {
@@ -34,5 +34,35 @@ public:
         map<int, bool> freq;
         recPermute(nums, temp, freq);
         return ans;
+    }
+};
+
+//<--------------------------------!!!---------------------------------->
+class Solution
+{
+private:
+    vector<vector<int>> finalVec;
+
+    void helperFunction(int idx, vector<int> &nums)
+    {
+        if (idx == (int)nums.size())
+        {
+            if (find(finalVec.begin(), finalVec.end(), nums) == finalVec.end())
+                finalVec.push_back(nums);
+            return;
+        }
+        for (int i = idx; i < (int)nums.size(); i++)
+        {
+            swap(nums[idx], nums[i]);
+            helperFunction(idx + 1, nums);
+            swap(nums[idx], nums[i]);
+        }
+    }
+
+public:
+    vector<vector<int>> permute(vector<int> &nums)
+    {
+        helperFunction(0, nums);
+        return finalVec;
     }
 };
