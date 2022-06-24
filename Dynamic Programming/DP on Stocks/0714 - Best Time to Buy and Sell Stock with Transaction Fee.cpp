@@ -1,4 +1,5 @@
-class Solution {
+class Solution
+{
 private:
     int dp[50003][2];
 
@@ -23,13 +24,14 @@ private:
         dp[idx][buy] = max(take, notTake);
         return dp[idx][buy];
     }
-    
+
 public:
-    int maxProfit(vector<int>& prices, int fee) {
+    int maxProfit(vector<int> &prices, int fee)
+    {
         memset(dp, -1, sizeof(dp));
         int n = prices.size();
         bool buy = true;
         int maxProfit = func(0, n, buy, prices, fee);
-        return maxProfit;  
+        return maxProfit;
     }
 };
