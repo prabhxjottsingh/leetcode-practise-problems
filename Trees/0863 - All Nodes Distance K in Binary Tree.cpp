@@ -64,3 +64,82 @@ public:
         return res;
     }
 };
+
+// Using BFS, This uses less time as well as less memory
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution
+{
+private:
+    map<TreeNode *, TreeNode *> mappingWithParent(TreeNode *root)
+    {
+        map<TreeNode *, TreeNode *> parentTreeNode;
+        queue<pair<TreeNode *, TreeNode *>> q;
+        q.push({root, NULL});
+        while (!q.empty())
+        {
+            auto TreeNode = q.front();
+            q.pop();
+            parentTreeNode[TreeNode.first] = TreeNode.second;
+            if (TreeNode.first->left)
+                q.push({TreeNode.first->left, TreeNode.first});
+            if (TreeNode.first->right)
+                q.push({TreeNode.first->right, TreeNode.first});
+        }
+        return parentTreeNode;
+    }
+
+public:
+    vector<int> distanceK(TreeNode *root, TreeNode *target, int k)
+    {
+        map<TreeNode *, TreeNode *> parentTreeNode = mappingWithParent(root);
+        queue<TreeNode *> q;
+        queue<pair<TreeNode *, int>> resQ;
+        q.push(root);
+        while (!q.empty())
+        {
+            TreeNode *temp = q.front();
+            q.pop();
+            if (temp == target)
+            {
+                resQ.push({temp, 0});
+                break;
+            }
+            if (temp->left)
+                q.push(temp->left);
+            if (temp->right)
+                q.push(temp->right);
+        }
+        vector<int> resVec;
+        const int N = 1e4 + 7;
+        vector<bool> isVis(N, 0);
+        while (!resQ.empty())
+        {
+            auto node = resQ.front();
+            resQ.pop();
+            TreeNode *tempNode = node.first;
+            int dist = node.second;
+            // cout << dist << " ";
+            if (dist > k || isVis[tempNode->val])
+                continue;
+            if (dist == k)
+                resVec.push_back(tempNode->val);
+            isVis[tempNode->val] = 1;
+            if (tempNode->left)
+                resQ.push({tempNode->left, dist + 1});
+            if (tempNode->right)
+                resQ.push({tempNode->right, dist + 1});
+            if (parentTreeNode[tempNode])
+                resQ.push({parentTreeNode[tempNode], dist + 1});
+        }
+        sort(resVec.begin(), resVec.end());
+        return resVec;
+    }
+};
