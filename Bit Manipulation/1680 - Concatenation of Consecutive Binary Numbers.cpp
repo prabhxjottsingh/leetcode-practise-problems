@@ -1,7 +1,7 @@
 // Problem Link: https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/
 
 // Time Complexity: O(N * K)
-// Space Complexity: O(`)
+// Space Complexity: O(1)
 
 class Solution
 {
