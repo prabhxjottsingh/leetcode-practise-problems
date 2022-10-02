@@ -58,3 +58,29 @@ public:
         return resVec;
     }
 };
+
+// Time Complexity: O(N * log N)
+// Space Complexity: O(1)
+
+class Solution
+{
+public:
+    vector<int> findClosestElements(vector<int> &arr, int k, int x)
+    {
+        int start = 0;
+        int end = (int)arr.size() - 1;
+        while (end - start + 1 > k)
+        {
+            int distFront = abs(x - arr[start]);
+            int distRear = abs(x - arr[end]);
+            if (distFront <= distRear)
+                end -= 1;
+            else
+                start += 1;
+        }
+        vector<int> resVec;
+        for (int i = start; i <= end; i++)
+            resVec.push_back(arr[i]);
+        return resVec;
+    }
+};
