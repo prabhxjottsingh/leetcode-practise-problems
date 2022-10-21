@@ -24,3 +24,48 @@ public:
         return dp[k + 1][dst] == INT_MAX ? -1 : dp[k + 1][dst];
     }
 };
+
+// Djisktra
+class Solution
+{
+public:
+    int findCheapestPrice(int n, vector<vector<int>> &flights, int src, int dst, int k)
+    {
+        vector<pair<int, int>> graph[n];
+        for (auto &a : flights)
+        {
+            int start = a[0];
+            int end = a[1];
+            int cost = a[2];
+            graph[start].push_back({end, cost});
+        }
+        queue<pair<int, pair<int, int>>> q;
+        q.push({0, {src, 0}});
+        int dist[n];
+        for (int i = 0; i < n; i++)
+            dist[i] = 1e9;
+        while (!q.empty())
+        {
+            auto front = q.front();
+            q.pop();
+            int stops = front.first;
+            int node = front.second.first;
+            int costPrev = front.second.second;
+            if (stops > k)
+                continue;
+            for (auto &child : graph[node])
+            {
+                int childNode = child.first;
+                int childCost = child.second;
+                if (childCost + costPrev < dist[childNode] && stops <= k)
+                {
+                    dist[childNode] = childCost + costPrev;
+                    q.push({stops + 1, {childNode, dist[childNode]}});
+                }
+            }
+        }
+        if (dist[dst] == 1e9)
+            return -1;
+        return dist[dst];
+    }
+};
