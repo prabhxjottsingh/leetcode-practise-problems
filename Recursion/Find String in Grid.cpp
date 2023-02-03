@@ -1,5 +1,6 @@
 //tc: O(n * m * k)
 //sc: O(n * mclass Solution {
+class Solution {
 private:
     vector<pair<int, int>> moves = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}, {-1, 1}, {1, -1}, {1, 1}, {-1, -1}};
     map<pair<int, int>, int> dir;
@@ -47,4 +48,4 @@ public:
         }
         return resVec;
     }
-};)
+};
